@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Go Rest API" parallel="tests" thread-count="3" >
+ 
+  
+ 
+  <test  name="LoginTest" >
+ <parameter name="browser" value="null"/>
+  <parameter name="browserversion" value=""/>
+    <classes>
+    <class name="demo.tests.LoginPageTest"/> 
+    </classes>
+  </test> 
+  
+  
+</suite> 
