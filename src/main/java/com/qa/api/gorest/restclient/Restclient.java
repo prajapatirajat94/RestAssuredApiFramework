@@ -3,6 +3,8 @@ package com.qa.api.gorest.restclient;
 
 import java.util.Map;
 
+import com.qa.api.gorest.util.TestUtil;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -18,20 +20,72 @@ public class Restclient {
 
 //HTTP Methods:- GET, POST, PUT, DELETE 	
  
-	
+/**
+ * 	This method is used to call GET api
+ * @param contentType
+ * @param baseURI
+ * @param basePath
+ * @param token
+ * @param paramsMap
+ * @param log
+ * @return this method is returning response from the GET call
+ */
 public static Response doGet(String contentType,String baseURI, String basePath,String token,Map<String, String>paramsMap,boolean log) {
 	
-	setBaseURI(baseURI);
+	if(setBaseURI(baseURI)) {
 	RequestSpecification request=createRequest(contentType,token,paramsMap,log);
 	return getResponse("GET", request, basePath);
-	
-		
+	}
+	return null;
 }
-	
-private static void setBaseURI(String baseURI) {
 
-	RestAssured.baseURI = baseURI;
+
+/**
+ * This method is used to call POST api
+ * @param contentType
+ * @param baseURI
+ * @param basePath
+ * @param token
+ * @param paramsMap
+ * @param log
+ * @param obj
+ * @return this method is returning response from the POST call
+ */
+public static Response doPost(String contentType,String baseURI, String basePath,String token,Map<String, String>paramsMap,boolean log, Object obj) {
 	
+	if(setBaseURI(baseURI)) {
+	RequestSpecification request=createRequest(contentType,token,paramsMap,log);
+	addRequestPayLoad(request, obj);
+	return getResponse("POST", request, basePath);
+	}
+	return null;
+}
+
+
+public static void addRequestPayLoad(RequestSpecification request,Object obj) {
+	String jsonPayload =TestUtil.getSerializedJSON(obj);
+	request.body(jsonPayload);
+	
+}
+
+
+
+
+
+	
+private static boolean setBaseURI(String baseURI) {
+	
+if(baseURI==null || baseURI.isEmpty()) {
+	System.out.println("Please pass the correct Base URI...");
+	return false;
+}
+try {
+	RestAssured.baseURI = baseURI;
+	return true;
+}catch(Exception e) {
+	System.out.println("some exception got occured while assiging the base URI with rest assured....");
+	return false;
+}
 }
 	
 	
@@ -47,7 +101,7 @@ else {
 
 
 if(token!=null) {
-	request.header("Authorization","Bearer"+token);
+	request.header("Authorization","Bearer "+token);
 }
 
 if(!(paramsMap==null)) {
@@ -65,6 +119,8 @@ else if(contentType.equalsIgnoreCase("XML")) {
 else if(contentType.equalsIgnoreCase("TEXT")){
 	request.contentType(ContentType.TEXT);
 }
+
+
 
 return request;
 
