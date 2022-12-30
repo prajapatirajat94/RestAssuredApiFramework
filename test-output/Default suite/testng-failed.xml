@@ -5,7 +5,7 @@
     <classes>
       <class name="com.qa.api.gorest.tests.CreateUserTest">
         <methods>
-          <include name="createUserAPIPOSTTest" invocation-numbers="0 1 2"/>
+          <include name="createUserAPIPOSTTest"/>
         </methods>
       </class> <!-- com.qa.api.gorest.tests.CreateUserTest -->
     </classes>

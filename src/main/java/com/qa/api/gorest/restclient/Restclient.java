@@ -1,6 +1,7 @@
 package com.qa.api.gorest.restclient;
 
 
+import java.io.File;
 import java.util.Map;
 
 import com.qa.api.gorest.util.TestUtil;
@@ -30,7 +31,7 @@ public class Restclient {
  * @param log
  * @return this method is returning response from the GET call
  */
-public static Response doGet(String contentType,String baseURI, String basePath,String token,Map<String, String>paramsMap,boolean log) {
+public static Response doGet(String contentType,String baseURI, String basePath,Map<String, String> token,Map<String, String>paramsMap,boolean log) {
 	
 	if(setBaseURI(baseURI)) {
 	RequestSpecification request=createRequest(contentType,token,paramsMap,log);
@@ -51,7 +52,7 @@ public static Response doGet(String contentType,String baseURI, String basePath,
  * @param obj
  * @return this method is returning response from the POST call
  */
-public static Response doPost(String contentType,String baseURI, String basePath,String token,Map<String, String>paramsMap,boolean log, Object obj) {
+public static Response doPost(String contentType,String baseURI, String basePath,Map<String, String> token,Map<String, String>paramsMap,boolean log, Object obj) {
 	
 	if(setBaseURI(baseURI)) {
 	RequestSpecification request=createRequest(contentType,token,paramsMap,log);
@@ -63,8 +64,14 @@ public static Response doPost(String contentType,String baseURI, String basePath
 
 
 public static void addRequestPayLoad(RequestSpecification request,Object obj) {
+	if(obj instanceof Map) {
+		request.formParams((Map<String,String>)obj);
+	}
+	else {
 	String jsonPayload =TestUtil.getSerializedJSON(obj);
 	request.body(jsonPayload);
+	}
+	
 	
 }
 
@@ -89,7 +96,7 @@ try {
 }
 	
 	
-private static RequestSpecification createRequest(String contentType,String token,Map<String, String>paramsMap,boolean log) {
+private static RequestSpecification createRequest(String contentType,Map<String, String> token,Map<String, String>paramsMap,boolean log) {
 RequestSpecification request;	
 	
 if(log) {
@@ -100,8 +107,9 @@ else {
 }
 
 
-if(token!=null) {
-	request.header("Authorization","Bearer "+token);
+if(token.size()>0) {
+	//request.header("Authorization","Bearer "+token);
+	request.headers(token);
 }
 
 if(!(paramsMap==null)) {
@@ -109,7 +117,7 @@ request.queryParams(paramsMap);
 
 }
 
-
+if(contentType!=null) {
 if(contentType.equalsIgnoreCase("JSON")) {
 	request.contentType(ContentType.JSON);
 }
@@ -119,7 +127,12 @@ else if(contentType.equalsIgnoreCase("XML")) {
 else if(contentType.equalsIgnoreCase("TEXT")){
 	request.contentType(ContentType.TEXT);
 }
-
+else if(contentType.equalsIgnoreCase("multipart")){
+	// when you want to upload image at that time need to pass content type as multipart
+	//then add below lines
+	request.multiPart("image", new File("C:\\Users\\praja\\Desktop\\rajat\\vision rajat project\\vision\\Rajat1.jpg"));
+}
+}
 
 
 return request;

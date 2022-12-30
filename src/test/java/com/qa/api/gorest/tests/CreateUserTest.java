@@ -1,5 +1,8 @@
 package com.qa.api.gorest.tests;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -7,6 +10,7 @@ import org.testng.annotations.Test;
 import com.qa.api.gorest.pojo.User;
 import com.qa.api.gorest.restclient.Restclient;
 import com.qa.api.gorest.util.ExcelUtil;
+import com.qa.api.gorest.util.Tokens;
 
 import io.restassured.response.Response;
 
@@ -28,8 +32,9 @@ public Object[][] getUserData() {
 @Test(dataProvider="getUserData")
 public void createUserAPIPOSTTest(String name,String email,String gender, String status) {
 	User user = new User(name,email,gender,status);
-	
-	Response response =Restclient.doPost("JSON", baseURI, basePath, token, null, true, user);
+	Map<String,String>authTokenMap=new HashMap<String,String>();
+	authTokenMap.put("Authorization", "Bearer "+token);
+	Response response =Restclient.doPost("JSON", baseURI, basePath, authTokenMap, null, true, user);
 	System.out.println(response.prettyPrint());
 	Assert.assertEquals(response.getStatusCode(), 201);
 	System.out.println("<========================================================>");

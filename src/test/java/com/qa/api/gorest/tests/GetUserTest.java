@@ -19,7 +19,9 @@ String token="7ed0d7f31bc21caed71d3b3ece46fa2dd5a94208ef6215d5eec2b913c71a85a4";
 
 @Test(priority = 1)
 public void getAllUserListApiTest() {
-	Response response =Restclient.doGet("JSON", baseURI, basePath, token, null, true);
+	Map<String,String>authTokenMap=new HashMap<String,String>();
+	authTokenMap.put("Authorization", "Bearer "+token);
+	Response response =Restclient.doGet("JSON", baseURI, basePath, authTokenMap, null, true);
 	System.out.println(response.prettyPrint());
 	Assert.assertEquals(response.getStatusCode(), 200);
 	Assert.assertEquals(response.header("Server"),"cloudflare");
@@ -34,9 +36,10 @@ public void getUserWithQueryParamApiTest() {
 	params.put("name","Kamalesh Sethi");
 	params.put("gender","female");
 	params.put("status","active");
+	Map<String,String>authTokenMap=new HashMap<String,String>();
+	authTokenMap.put("Authorization", "Bearer "+token);
 	
-	
-	Response response =Restclient.doGet("JSON", baseURI, basePath, token, params, true);
+	Response response =Restclient.doGet("JSON", baseURI, basePath, authTokenMap, params, true);
 	System.out.println(response.prettyPrint());
 	Assert.assertEquals(response.getStatusCode(), 200);
 	Assert.assertEquals(response.header("Server"),"cloudflare");
