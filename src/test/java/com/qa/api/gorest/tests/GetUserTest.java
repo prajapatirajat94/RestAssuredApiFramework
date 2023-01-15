@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.qa.api.gorest.restclient.Restclient;
 
+import io.qameta.allure.Epic;
 import io.restassured.response.Response;
 
 public class GetUserTest {
