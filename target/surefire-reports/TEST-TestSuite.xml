@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="19.882" tests="8" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:/Users/praja/apache-maven-3.8.4-bin/apache-maven-3.8.4/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="maven.conf" value="C:/Users/praja/apache-maven-3.8.4-bin/apache-maven-3.8.4/conf"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.13\bin"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="C:\Users\praja\apache-maven-3.8.4-bin\apache-maven-3.8.4"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\praja"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11.0.13"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.13+10-LTS-370"/>
+    <property name="user.name" value="praja"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\praja\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.13"/>
+    <property name="user.dir" value="C:\Users\praja\eclipse-workspace\RestAssuredApiAutomationFramework"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/praja/eclipse-workspace/RestAssuredApiAutomationFramework"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.13\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\praja\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\praja\bin;C:\Program Files\Python311\Scripts;C:\Program Files\Python311;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Player\bin;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Common Files\Rockwell;C:\Windows\System32\OpenSSH;C:\Program Files\Java\jdk-11.0.13\bin;C:\Users\praja\AppData\Local\Android\Sdk\build-tools;C:\Users\praja\AppData\Local\Android\Sdk\tools;C:\Users\praja\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Android\Android Studio\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\praja\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\praja\scoop\shims;C:\Users\praja\AppData\Local\Microsoft\WindowsApps;C:\Users\praja\.dotnet\tools;C:\Users\praja\AppData\Roaming\npm;C:\Users\praja\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\praja\AppData\Local\JetBrains\Toolbox\scripts;C:\Program Files\JetBrains\PyCharm Community Edition 2022.2.4\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.13+10-LTS-370"/>
+    <property name="classworlds.conf" value="C:/Users/praja/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="C:/Users/praja/apache-maven-3.8.4-bin/apache-maven-3.8.4/lib/jansi-native"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="createUserAPIPOSTTest" classname="com.qa.api.gorest.tests.CreateUserTest" time="0.422">
+    <failure message="expected [201] but found [422]" type="java.lang.AssertionError">java.lang.AssertionError: expected [201] but found [422]
+	at com.qa.api.gorest.tests.CreateUserTest.createUserAPIPOSTTest(CreateUserTest.java:39)
+</failure>
+    <system-out><![CDATA[I am in onStart method Rest API regression Test
+Test Suite started!
+I am in onTestStart method createUserAPIPOSTTest start
+createUserAPIPOSTTest started!
+JSON body Payload =====> {"name":"RAJTt","email":"PK@gmail.com","gender":"male","status":"active"}
+Request method:	POST
+Request URI:	https://gorest.co.in/public/v2/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer 7ed0d7f31bc21caed71d3b3ece46fa2dd5a94208ef6215d5eec2b913c71a85a4
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "RAJTt",
+    "email": "PK@gmail.com",
+    "gender": "male",
+    "status": "active"
+}
+{access_token=0b52a6c6d80247b363173c7aeb0ae9d63324e3c4, expires_in=315360000, token_type=bearer, scope=null, refresh_token=f17c1ad6236ad9dba3e8488cfe1e79a2b5940175, account_id=167749989, account_username=Prajapatirajat94}
+I am in onTestStart method GetAccountBlockedStatusTest start
+GetAccountBlockedStatusTest started!
+Auth Token ======> 0b52a6c6d80247b363173c7aeb0ae9d63324e3c4
+Request method:	GET
+Request URI:	https://api.imgur.com/account/v1/prajapatirajat94/block
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer 0b52a6c6d80247b363173c7aeb0ae9d63324e3c4
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+200
+{
+    "data": {
+        "blocked": false
+    }
+}
+{
+    "data": {
+        "blocked": false
+    }
+}
+[
+    {
+        "field": "email",
+        "message": "has already been taken"
+    }
+]
+[
+    {
+        "field": "email",
+        "message": "has already been taken"
+    }
+]
+I am in onTestFailure method createUserAPIPOSTTest failed
+createUserAPIPOSTTest failed!
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.BasicClientConnectionManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.BasicClientConnectionManager).
+log4j:WARN Please initialize the log4j system properly.
+]]></system-err>
+  </testcase>
+  <testcase name="createUserAPIPOSTTest" classname="com.qa.api.gorest.tests.CreateUserTest" time="1.063">
+    <failure message="expected [201] but found [422]" type="java.lang.AssertionError">java.lang.AssertionError: expected [201] but found [422]
+	at com.qa.api.gorest.tests.CreateUserTest.createUserAPIPOSTTest(CreateUserTest.java:39)
+</failure>
+    <system-out><![CDATA[I am in onTestStart method createUserAPIPOSTTest start
+createUserAPIPOSTTest started!
+JSON body Payload =====> {"name":"KAMALt","email":"PR@gmail.com","gender":"female","status":"active"}
+Request method:	POST
+Request URI:	https://gorest.co.in/public/v2/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer 7ed0d7f31bc21caed71d3b3ece46fa2dd5a94208ef6215d5eec2b913c71a85a4
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "KAMALt",
+    "email": "PR@gmail.com",
+    "gender": "female",
+    "status": "active"
+}
+[
+    {
+        "field": "email",
+        "message": "has already been taken"
+    }
+]
+[
+    {
+        "field": "email",
+        "message": "has already been taken"
+    }
+]
+I am in onTestFailure method createUserAPIPOSTTest failed
+createUserAPIPOSTTest failed!
+]]></system-out>
+  </testcase>
+  <testcase name="createUserAPIPOSTTest" classname="com.qa.api.gorest.tests.CreateUserTest" time="0.469">
+    <failure message="expected [201] but found [422]" type="java.lang.AssertionError">java.lang.AssertionError: expected [201] but found [422]
+	at com.qa.api.gorest.tests.CreateUserTest.createUserAPIPOSTTest(CreateUserTest.java:39)
+</failure>
+    <system-out><![CDATA[{access_token=3cfaf712f494a1e10e6b81ef3e2d65f8dc57a82c, expires_in=315360000, token_type=bearer, scope=null, refresh_token=d3e5fef294fde6c1193f674a77580b3eaef93555, account_id=167749989, account_username=Prajapatirajat94}
+I am in onTestStart method uploadImagePostAPITest start
+uploadImagePostAPITest started!
+Client id is  ======> bdfef232990deba
+Request method:	POST
+Request URI:	https://api.imgur.com/3/upload
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	description=Test Description api
+				title=Test title api
+Path params:	<none>
+Headers:		Authorization=Client-ID bdfef232990deba
+				Accept=*/*
+				Content-Type=multipart/form-data
+Cookies:		<none>
+Multiparts:		------------
+				Content-Disposition: form-data; name = image; filename = Rajat1.jpg
+				Content-Type: application/octet-stream
+
+				C:\Users\praja\Desktop\rajat\vision rajat project\vision\Rajat1.jpg
+Body:			<none>
+[
+    {
+        "field": "email",
+        "message": "has already been taken"
+    }
+]
+[
+    {
+        "field": "email",
+        "message": "has already been taken"
+    }
+]
+I am in onTestFailure method createUserAPIPOSTTest failed
+createUserAPIPOSTTest failed!
+]]></system-out>
+  </testcase>
+  <testcase name="GetAccountBlockedStatusTest" classname="com.qa.api.gorest.tests.GetImgurApiTest" time="0.062"/>
+  <testcase name="GetAccountImageTest" classname="com.qa.api.gorest.tests.GetImgurApiTest" time="0.235"/>
+  <testcase name="uploadImagePostAPITest" classname="com.qa.api.gorest.tests.GetImgurApiTest" time="4.329"/>
+  <testcase name="getAllUserListApiTest" classname="com.qa.api.gorest.tests.GetUserTest" time="1.079"/>
+  <testcase name="getUserWithQueryParamApiTest" classname="com.qa.api.gorest.tests.GetUserTest" time="0.5"/>
+</testsuite>

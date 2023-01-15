@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Rest API Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.qa.api.gorest.listeners.ExtentReportListeners"/>
+    <listener class-name="com.qa.api.gorest.listeners.AllureReportListener"/>
+  </listeners>
+  <test thread-count="3" parallel="classes" name="Rest API regression Test(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.api.gorest.tests.CreateUserTest">
+        <methods>
+          <include name="createUserAPIPOSTTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.qa.api.gorest.tests.CreateUserTest -->
+    </classes>
+  </test> <!-- Rest API regression Test(failed) -->
+</suite> <!-- Failed suite [Rest API Test Suite] -->
